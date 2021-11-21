@@ -1,0 +1,25 @@
+Tutorial:
+https://youtu.be/Qkjib58zKWA
+
+01 -    Inicializo el repositiorio: git init
+        Inicializo Node.js
+
+02 -    Creo src/index.js
+        Instalo wp: npm install webpack webpack-cli
+        creo archivo de configuracion de wp: webpack.config.js
+
+03      En webpack.config.js ... 
+
+        Añadimos un objeto para añadirle lo que necesitamos para coonfigurar WP y generar un output
+        Requiro el path
+        Dentro del ojeto module.export :
+            defino el entry point
+            defino un output, donde defino donde quiero que cree la carpeta
+            defino el nombre del archivo que va a crear el wp
+        Ddefino estensiones: en resolve digo que quiero que sean .js
+
+        Edito package.json .... "build": "webpack --mode production --config webpack.config.js",
+        Cuando corremos el proyecto "npm run build" viene a package.json y busca el script build y 
+        lo ejecuta.
+
+04      Al ejecutar el procyeto genera en dist el archivo main.js con el resultado directo de index.js
